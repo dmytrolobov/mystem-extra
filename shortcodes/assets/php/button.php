@@ -10,7 +10,7 @@
 	*/
 	
 	?>
-	<div id="wow-icons">
+	<div id="mystem-icons">
 	<div class="box">
 		<div class="iconrow">
 			<div class="iconcol">

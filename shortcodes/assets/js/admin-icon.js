@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 
 		setTimeout(function() {
 			
-			tb_show( '<img src="'+$('#icon-picker-button').find('.icon').attr('src')+'" alt="Icons" class="picker_ttl_icon">Icons', '#TB_inline?height=475&width=700&inlineId=wow-icons' );						
+			tb_show( '<img src="'+$('#icon-picker-button').find('.icon').attr('src')+'" alt="Icons" class="picker_ttl_icon">Icons', '#TB_inline?height=475&width=700&inlineId=mystem-icons' );						
 			
 			tbReposition();
 			
