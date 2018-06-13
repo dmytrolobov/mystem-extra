@@ -1,0 +1,304 @@
+/* ========= INFORMATION ============================
+	- document:  Shortcode Set
+	- author:    Dmytro Lobov & Wow-Company
+	- version:   1.0
+	- email:     support@wow-company.com
+==================================================== */
+
+/* = Row and Columns
+-------------------------------------------------------------- */
+.row {
+	display: flex;	
+}
+.column {
+	width:100%;
+	padding: 0 20px;	
+}
+.column:first-child {
+	width:100%;
+	padding-left: 0;	
+}
+.column:last-child {
+	width:100%;
+	padding-right: 0;	
+}
+
+@media screen and (max-width: 780px) { 
+	.row {
+		flex-wrap: wrap;
+	}
+	.column {
+		padding: 0;
+	}
+}
+
+/* = Tabs
+-------------------------------------------------------------- */
+.tabs {	
+	margin: 0 0 30px;
+}
+.tabs__caption {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	list-style: none;
+	position: relative;
+	margin: -1px 0 0 -1px;
+}
+.tabs__caption li:last-child:before {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: -2px;
+	z-index: -1;
+	height: 5px;
+	
+}
+.tabs__caption:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.tabs__caption li {
+	padding: 9px 15px;	
+	margin: 1px 0 0 1px;		
+	position: relative;
+	border:solid;
+	border-width: 1px 1px 0;	
+	text-align: center;	
+	font-weight: bold;
+}
+.tabs__caption li:not(.active) {
+	cursor: pointer;
+}
+.tabs__caption li:not(.active):hover {
+	
+}
+.tabs__caption .active {
+	
+}
+.tabs__caption .active:after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	height: 5px;
+}
+.tabs__content {
+	display: none;
+	border: 1px solid;	
+	padding: 7px 15px;
+}
+.tabs__content.active {
+	display: block;
+}
+.tabs-left .tabs__caption {
+	float: left;
+	display: block;
+}
+.tabs-left .tabs__caption li {
+	float: none;
+	border-width: 1px 0 1px 1px;
+	
+}
+.tabs-left .tabs__caption li:last-child:before {
+	display: none;
+}
+.tabs-left .tabs__caption .active:after {
+	left: auto;
+	top: 0;
+	right: -1px;
+	bottom: 0;
+	width: 1px;
+	height: auto;
+}
+.tabs-left .tabs__content {
+	overflow: hidden;
+}
+.tabs-right .tabs__caption {
+	float: right;
+	display: block;
+}
+.tabs-right .tabs__caption li {
+	float: none;
+	border-width: 1px 1px 1px 0;	
+}
+.tabs-right .tabs__caption li:last-child:before {
+	display: none;
+}
+.tabs-right .tabs__caption .active:after {
+	right: auto;
+	top: 0;
+	left: -1px;
+	bottom: 0;
+	width: 1px;
+	height: auto;
+}
+.tabs-right .tabs__content {
+	overflow: hidden;
+	
+}
+@media screen and (max-width: 650px) {
+	
+	.tabs__caption li {
+		-webkit-flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
+		flex: 1 0 auto;
+	}
+	.tabs-left .tabs__caption, .tabs-right .tabs__caption {
+		float: none;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.tabs-left .tabs__caption li, .tabs-right .tabs__caption li {
+		border-width: 1px 1px 0;		
+	}
+	.tabs-left .tabs__caption li:last-child:before, .tabs-right .tabs__caption li:last-child:before {
+		display: block;
+	}
+	.tabs-left .tabs__caption .active:after, .tabs-right .tabs__caption .active:after {
+		top: auto;
+		bottom: -5px;
+		left: 0;
+		right: 0;
+		width: auto;
+		height: 5px;
+		background: #FFF;
+	}	
+	
+}
+
+/* =Accordion
+-------------------------------------------------------------- */
+.accordion-wrap {
+	max-width: 700px;	
+	margin: 0 0 22px;
+}
+.accordion-wrap .accordion-block {
+	border-top: 1px;	
+	border-style: solid;
+}
+.accordion-wrap .accordion-block:last-child {
+	border-bottom: 1px;	
+	border-style: solid;
+}
+.accordion-wrap .accordion-title {
+	font-size: 20px;	
+	padding: 10px 15px;			
+	cursor:pointer;
+	margin-top: 1px;
+}
+.accordion-wrap .accordion-title a {
+	display:block;	
+	outline:none;
+}
+.accordion-wrap .accordion-title a:hover {
+	text-decoration:none;
+}
+.accordion-wrap .accordion-content {	 
+	padding: 9px 15px;
+}
+.accordion-wrap .accordion-title .plus, .accordion-wrap .accordion-title .minus {
+	font-weight: bold;
+	float: right;  
+  text-align: center;
+  width: 10px;
+	display:none;
+}
+.accordion-wrap .accordion-title .plus {
+	display:block;
+}
+.accordion-wrap .accordion-title.active .minus  {
+	display:block;
+}
+.accordion-wrap .accordion-title.active .plus  {
+	display:none;
+}
+
+/* =Toggle
+-------------------------------------------------------------- */
+.toggle {
+	border:1px solid;
+	margin: 0 0 22px;	
+}
+.toggle a {
+	display:block;	
+	outline:none;
+}
+.toggle a:hover {
+	text-decoration:none;
+}
+.toggle-action {	
+	font-size: 20px;
+	padding: 10px 15px;
+}
+.toggle-action .plus, .toggle-action .minus {
+	float: left;
+	font-weight: bold;
+	margin: 0 5px 0 0;
+	text-align: center;
+	width: 10px;
+	display:none;
+}
+.toggle-action .plus {
+	display:block;
+}
+.toggle-action.active .minus {
+	display:block;
+}
+.toggle-action.active .plus {
+	display:none;
+}
+.toggle-content {
+	border-top: 1px solid #E5E5E5;
+	padding: 9px 15px;
+}
+.collapse {
+	-webkit-transition: height 0.35s ease;
+	-moz-transition: height 0.35s ease;
+	-ms-transition: height 0.35s ease;
+	-o-transition: height 0.35s ease;
+	transition: height 0.35s ease;
+	position: relative;
+	overflow: hidden;
+	height: 0;
+}
+.collapse.in {
+	height: auto;
+}
+
+
+/* = Message Alerts
+-------------------------------------------------------------- */
+.message_info, .message_success, .message_warning, .message_error {
+	margin: 10px 0px;
+	padding:12px;
+	
+}
+.message_info {
+	color: #00529B;
+	background-color: #BDE5F8;
+}
+.message_success {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+.message_warning {
+	color: #9F6000;
+	background-color: #FEEFB3;
+}
+.message_error {
+	color: #D8000C;
+	background-color: #FFD2D2;
+}
+.message_info i, .message_success i, .message_warning i, .message_error i {
+	margin:10px 22px;
+	font-size:2em;
+	vertical-align:middle;
+}

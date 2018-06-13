@@ -1,0 +1,104 @@
+/* ========= INFORMATION ============================
+	- document:    MyStem Taxonomy Settings!
+	- author:      Dmytro Lobov 
+	- url:         https://wordpress.org/plugins/mystem-taxonomy-settings/
+	- version:     1.0
+	- description: The extension for a theme MyStem - https://wordpress.org/themes/mystem/
+	- website:     https://mystemplus.com/
+
+==================================================== */
+
+/*--------------------------------------------------------------
+		Category Tamplate
+	--------------------------------------------------------------*/
+	#full-width {
+		width: 100%;
+	}
+	.cat-grid {
+		display: flex;	
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.cat-grid article{
+		flex-basis: 49.5%;
+	}
+	.cat-grid.third article{
+		flex-basis: 32.8%;
+	}
+	.cat-grid.fourth article{
+		flex-basis: 24.5%;
+	}
+	
+	.cat-grid article .comments-link{
+		display: none;
+	} 
+	.cat-grid.third .entry-header, .cat-grid.fourth .entry-header{
+		padding: 0 10px;
+	}
+	.cat-grid.third h4{
+		font-size: 16px;
+		margin-bottom: 0;
+	}
+	.cat-grid.third .entry-summary, .cat-grid.fourth .entry-summary {
+		padding: 25px 10px;
+	}
+	
+	#primary .cat-classic .comments-link, .cat-classic .continue-reading, .cat-grid .continue-reading {
+		display: none;
+	}
+	
+	
+	
+	.edd-product .cat-classic .post-content {
+		position: relative;
+	}
+	
+	.edd-product .under-excerpt {
+		position: absolute;
+		width: 100%;
+		bottom: 10px;
+		padding-right: 20px;
+
+	}
+	
+	
+	@media screen and (min-width: 767px) {
+		.cat-classic article {
+			display: flex;	
+			justify-content: space-between;
+		}
+		.cat-classic article .post-img {
+			min-width: 200px;
+			min-height: 200px;
+		}
+		.cat-classic article .post-img img {			
+			width: 200px;
+			height: 200px;
+		}
+		
+		.cat-classic article .post-content {
+			width: 100%;
+			padding: 0 10px;
+		}
+		
+		.cat-classic .entry-header {
+			padding: 0;
+		}
+		.cat-classic .entry-title {
+			padding-top: 5px;
+			margin-bottom: 0;
+		}
+		
+		.cat-classic .entry-summary, .cat-classic .entry-summary p {
+			padding: 0;
+			margin: 0;
+		}
+			
+	}
+	
+	@media screen and (max-width: 767px) {
+		.cat-grid article, .cat-grid.third article, .cat-grid.fourth article{
+			flex-basis: 100%;
+		}		
+	}
+	
